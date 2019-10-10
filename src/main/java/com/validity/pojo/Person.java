@@ -127,4 +127,19 @@ public class Person {
                 ", number='" + number + '\'' +
                 '}';
     }
+
+    public Person(String id, String firstName, String lastName, String company, String email, String address1, String address2, String zip, String city, String state, String stateShort, String number) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.company = company;
+        this.email = email;
+        this.address1 = address1;
+        this.address2 = address2;
+        this.zip = zip;
+        this.city = city;
+        this.state = state;
+        this.stateShort = stateShort;
+        this.number = number;
+    }
 }
