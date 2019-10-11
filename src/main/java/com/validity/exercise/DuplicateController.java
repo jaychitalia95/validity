@@ -16,8 +16,8 @@ public class DuplicateController {
 
     /**
      *
-     * @return JSONObject
-     * Uses the services to read the csv and find the duplicates. Add both the list in a JSON object and return that JSON Object
+     * @return result
+     * Uses the services to read the csv and find the duplicates. Add both the list in a JSON object result and return that JSON Object
      */
     @GetMapping(value = "/")
     public JSONObject getDuplicates(){
