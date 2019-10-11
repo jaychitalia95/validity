@@ -13,17 +13,22 @@ import java.util.List;
 public class DuplicateController {
     private CsvReaderService csvReaderService = new CsvReaderService();
     private FindDuplicateService findDuplicateService = new FindDuplicateService();
+
+    /**
+     *
+     * @return JSONObject
+     * Uses the services to read the csv and find the duplicates. Add both the list in a JSON object and return that JSON Object
+     */
     @GetMapping(value = "/")
     public JSONObject getDuplicates(){
         List<Person> personData;
         List<Person> duplicatePersonData;
-        personData = csvReaderService.readCsv("normal.csv");
+        personData = csvReaderService.readCsv("advanced.csv");
         duplicatePersonData = findDuplicateService.getDuplicates(personData);
         personData.removeAll(duplicatePersonData);
         JSONObject result = new JSONObject();
         result.put("Duplicates", duplicatePersonData);
         result.put("Non Duplicates", personData);
         return result;
-
     }
 }

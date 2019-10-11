@@ -12,6 +12,12 @@ import java.util.List;
 
 public class CsvReaderService {
 
+    /**
+     *
+     * @param fileName
+     * @return personData
+     * Parsing CSV file to person objects, add those objects to personData arraylist and return that arraylist
+     */
     public List<Person> readCsv(String fileName) {
         List<Person> personData = new ArrayList<>();
         String[] data;

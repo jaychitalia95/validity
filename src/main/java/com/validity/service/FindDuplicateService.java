@@ -5,6 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FindDuplicateService {
+
+    /**
+     *
+     * @param personData
+     * @return duplicatePersonData
+     * Calculates and compares the levenshtein distance of the unique identifying fields like email, number, firstname, lastname
+     * and adds the duplicate records in duplicatePersonData arraylist and returns that arraylist
+     */
     public List<Person> getDuplicates(List<Person> personData){
         List<Person> duplicatePersonData = new ArrayList<>();
         Levenshtein levenshtein = new Levenshtein();
